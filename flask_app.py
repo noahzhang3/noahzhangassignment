@@ -7,21 +7,21 @@ app = Flask(__name__)
 hops = hs.Hops(app)
 
 @hops.component( 
-    "/pointat", 
-    name="PointAt",    
-    description="Get point along curve",    
-    icon="examples/pointat.png",    
+    "/addition", 
+    name="add",    
+    description="adding two number",        
     inputs=[        
-        hs.HopsCurve("Curve", "C", "Curve to evaluate"),       
-        hs.HopsNumber("t", "t", "Parameter on Curve to evaluate"),
+        hs.HopsNumber("first number", "F", "the first number to add with"),       
+        hs.HopsNumber("second number", "S", "the second muber to add with"),
         ],    
     outputs=[        
-        hs.HopsPoint("P", "P", "Point on curve at t")  
+        hs.HopsNumber("result", "R", "result")
         ]
     )
 
-def pointat(curve, t):
-    return curve.PointAt(t)
+def pointat(first_number, second_number):
+    result_final = first_number + second_number
+    return result_final
 
 if __name__ == "__main__":
     app.run()
