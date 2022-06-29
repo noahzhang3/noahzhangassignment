@@ -19,9 +19,9 @@ hops = hs.Hops(app)
         ]
     )
 
-def pointat(first_number, second_number):
-    result_final = first_number * second_number
-    return result_final
+def times(x, y):
+    n = x*y
+    return n
 
 if __name__ == "__main__":
     app.run()
