@@ -11,8 +11,8 @@ hops = hs.Hops(app)
     name="add",    
     description="adding two number",        
     inputs=[        
-        hs.HopsNumber("first number", "F", "the first number to add with"),       
-        hs.HopsNumber("second number", "S", "the second muber to add with"),
+        hs.HopsNumber("first number", "F", "Floor Number"),       
+        hs.HopsNumber("second number", "S", "186"),
         ],    
     outputs=[        
         hs.HopsNumber("result", "R", "result")
